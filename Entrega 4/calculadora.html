@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<meta charset="utf-8">
+<script src="http://mathjs.org/js/lib/math.js" type="text/javascript"></script>
+<script src="script/calculadora.js" type="text/javascript"></script>
+
+</head>
+<body onLoad="inic()">
+  <form name="formcalc">
+    <label id=Resp></label><br>
+    <input type="text" id="resultado" >
+    <!-- <label class="total">Total</label> -->
+    <input class="total" type="text" size="12" id="operaciones">
+
+    <table>
+      <tr>
+        <td class="tooltip"><input type="button" class="button buttonBlue2" value="&#8592" onClick="atras()">  <span class="tooltiptext">Atras</span></td>
+        <td class="tooltip"><input type="button" class="button buttonBlue2" value="&#8594" onClick="adelante()"><span class="tooltiptext">adelante</span></td>
+        <td class="tooltip"><input type="button" class="button buttonBlue1" value="(" onClick="escribe(value)"><span class="tooltiptext">Parentesis abierto</span></td>
+        <td class="tooltip"><input type="button" class="button buttonBlue1" value=")" onClick="escribe(value)"></td>
+        <td class="tooltip"><input type="button" class="button buttonBlue1" value="pi" onClick="escribe(value)"></td>
+
+      </tr>
+      <tr>
+        <td><input type="button" class="button buttonBlue1" value="sin(" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="cos(" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="tan(" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="sqrt(" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="log(" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button buttonBlue1" value="^" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="^2" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="^-1" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="e" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonBlue1" value="abs(" onClick="escribe(value)"></td>
+      </tr>
+    </table>
+    <div class="numeros tooltip">
+    <table >
+    <span class="tooltiptext">Teclado Numerico</span>
+      <tr>
+        <td><input type="button" class="button button1" value="1" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="2" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="3" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="4" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="5" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="6" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="7" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="8" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="9" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="0" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="." onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="*10^" onClick="escribe(value)"></td>
+      </tr>
+    </table>
+    </div>
+    <table>
+      <tr>
+        <td><input type="button" class="button button1" value="Ans" onClick="escribe(value)"></td>
+        <td><input type="button" class="button buttonRed" value="DEL" onClick="borrar ()"></td>
+        <td><input type="button" class="button buttonRed" value="AC" onClick="vaciar ()"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="*" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="/" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="+" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="-" onClick="escribe(value)"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="button button1" value="%" onClick="escribe(value)"></td>
+        <td><input type="button" class="button button1" value="=" onClick="calcular()"></td>
+      </tr>
+    </table>
+    
+    </p>
+  </form>
+  <div >
+<div class="coment">
+  <h1>Manual de Usuario</h1>
+</div>
+  <br>
+</body>
+</html>
